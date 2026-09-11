@@ -93,24 +93,53 @@ Permissions; the speedometer simply won't be able to show a live reading without
 
 <h2>Advertising</h2>
 
-<p>The free tier shows ads served by Google AdMob, a third-party advertising network.
-AdMob may collect device identifiers (such as the Android Advertising ID) and use them for ad
-personalization, subject to your consent choices. Where required by law (EEA, UK, California),
-the app shows a consent form (via Google's User Messaging Platform) before any personalized
-ads are requested, and you can change your choice at any time via that form.</p>
+<p>The free tier shows ads served by <strong>Unity Ads</strong>, a third-party advertising
+network operated by Unity Technologies. Unity may collect device identifiers (such as the Android
+Advertising ID) and use them for ad personalisation, subject to your consent choices. Where required
+by law (EEA, UK, California), the app shows a consent form (via Google's User Messaging Platform)
+before any personalised ads are requested, your choice is passed to Unity before any ad is
+requested, and you can change that choice at any time via the same form.</p>
 
-<p>See Google's own policies for what AdMob collects:</p>
+<p>See Unity's own policies for what it collects:</p>
 <ul>
-  <li><a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
-  <li><a href="https://support.google.com/admob/answer/6128543">https://support.google.com/admob/answer/6128543</a></li>
+  <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">https://unity.com/legal/game-player-and-app-user-privacy-policy</a></li>
+  <li><a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></li>
 </ul>
 
 <p>Some optional extras — certain speedometer dials, HUD styles and backdrops, and the
 faster acceleration finish lines — can also be unlocked for a limited time by choosing to
-watch a rewarded ad. Those are served by the same AdMob network described above, and are only
+watch a rewarded ad. Those are served by the same Unity network described above, and are only
 ever shown when you tap to ask for one.</p>
 
+<p>Earlier versions of this app used Google AdMob. It no longer does, and no data is sent to
+AdMob.</p>
+
 <p>Purchasing <strong>Premium</strong> removes all ads permanently.</p>
+
+<h2>Reporting map corrections</h2>
+
+<p>The app lets you report a wrong or missing speed limit, and a missing fuel or charging station,
+to OpenStreetMap. You always start this yourself, and nothing is sent until you press Send on a
+screen that shows you the exact wording first.</p>
+
+<p>When you do send one, the following is transmitted to OpenStreetMap and becomes a
+<strong>public, permanent map note</strong> that anyone can read:</p>
+<ul>
+  <li>the coordinates the report is about</li>
+  <li>the speed limit you entered, or the kind of station</li>
+  <li>the road or area name produced by your device's geocoder</li>
+  <li>your direction of travel, and the GPS accuracy of the fix</li>
+  <li>the app's name, version and build number</li>
+</ul>
+
+<p>Reports are sent <strong>anonymously</strong>. They are not tied to any account, device
+identifier or advertising ID, and the app sends no name, email or contact detail with them. There is
+no free-text box: every note is assembled from the choices above, so a report cannot carry personal
+information. Because map notes are public and permanent, please do not use this feature for anything
+you would not want published.</p>
+
+<p>OpenStreetMap Foundation privacy policy —
+<a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></p>
 
 <h2>In-app purchase</h2>
 
@@ -123,7 +152,7 @@ confirmation token, used solely to unlock premium features on your device/accoun
 <p>The app does not require an account and does not collect your name, email, contacts,
 photos, or files. We ourselves operate no servers and receive no data about you.</p>
 
-<p>Note that if you consent to personalised ads, Google AdMob may use your advertising ID for
+<p>Note that if you consent to personalised ads, Unity Ads may use your advertising ID for
 cross-app ad personalisation, as described under "Advertising" above — you can withdraw that consent
 at any time via the consent form, or reset/delete your advertising ID in Android Settings.</p>
 
