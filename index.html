@@ -36,14 +36,15 @@
 <body>
 
 <h1>Speedometer: HUD, Odometer — Privacy Policy</h1>
-<p class="updated">Last updated: 16 August 2026</p>
+<p class="updated">Last updated: 27 September 2026</p>
 
 <p>This policy covers the Android app <strong>Speedometer: HUD, Odometer</strong> (package <code>com.speedopro.app</code>), previously published as <em>GPS Speedometer</em>. It is referred to below simply as “the app”.</p>
 
 <h2>What the app does with your data</h2>
 
-<p><strong>Location (GPS speed).</strong> The app reads your device's GPS location to
-calculate and display your current speed, altitude, and distance travelled.</p>
+<p><strong>Location (GPS speed).</strong> The app reads your device's GPS location — or, if you
+connect one, an external Bluetooth GPS receiver's (see below) — to calculate and display your current
+speed, altitude, and distance travelled.</p>
 <ul>
   <li>Your location is <strong>never sent to us</strong> — we operate no servers and collect nothing about you.</li>
   <li>Your raw location is <strong>not stored</strong> anywhere off your device.</li>
@@ -66,6 +67,22 @@ limit</strong>; and any map correction you chose to send to OpenStreetMap. This 
 <strong>only in the app's private storage on your device</strong>, is never uploaded to us or to
 anyone else, and goes away when you delete the trip, clear trip history, or uninstall the app.</p>
 
+<p><strong>External GPS receiver (Bluetooth, optional).</strong> If you switch on "External GPS
+receiver" in Settings, the app connects to the Bluetooth GPS receiver you pick from the devices already
+paired with your phone, and reads the position, speed and satellite information it sends. On Android 12
+and later this needs the "Nearby devices" permission, which the app asks for only when you switch the
+feature on. The app does not scan for other devices. What the receiver sends is used on your device
+exactly like the phone's own GPS, and is <strong>never sent to us or to anyone else</strong>.</p>
+
+<p><strong>Drive score, timers and the g-force meter (on your device).</strong> The drive score is
+worked out on your device from the trip it belongs to. The acceleration, sprint and braking timers
+save their results on your device. The g-force meter reads your phone's motion sensors only while it
+is on screen; its readings are not stored or sent anywhere.</p>
+
+<p><strong>Voice alerts (optional).</strong> If you turn on voice alerts, short fixed phrases such as
+"Speed limit 60" or "Toll ahead" are passed to your phone's own text-to-speech engine to be spoken.
+They contain no personal information.</p>
+
 <p><strong>Home screen widgets.</strong> If you add one of the app's home screen widgets, it
 shows the current trip's speed, distance and time, or your last trip's summary and your best
 acceleration time. That information is read from what is already stored on your device and is
@@ -77,27 +94,51 @@ keeps reading your location even if you switch away from it, so the trip isn't l
 requires a permanent notification to be shown for the entire time this is happening, and recording
 stops as soon as you press Stop.</p>
 
-<p><strong>Third-party lookups.</strong> To show weather, posted speed limits, and the map behind a
-recorded route, the app sends your approximate coordinates to these services. None of them receives
-any account, device, or advertising identifier — only a latitude/longitude, or the map tile numbers
-derived from it:</p>
+<p><strong>Third-party lookups.</strong> To show weather, posted speed limits and road alerts,
+nearby fuel and charging stations, and the map behind a recorded route, the app sends your
+approximate coordinates to these services. None of them receives any account, device, or advertising
+identifier — only a latitude/longitude, or the map tile numbers derived from it:</p>
 <ul>
   <li><strong>Open-Meteo</strong> (weather) —
     <a href="https://open-meteo.com/en/terms">https://open-meteo.com/en/terms</a></li>
-  <li><strong>OpenStreetMap Overpass API</strong> (posted speed limits) —
+  <li><strong>OpenStreetMap Overpass API</strong> (posted speed limits, road alerts, and nearby
+    stations when Photon has none) — sent to one of the public Overpass servers, tried in turn:
+    overpass-api.de (FOSSGIS), maps.mail.ru (VK) and overpass.private.coffee. Map data ©
+    OpenStreetMap contributors.
     <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></li>
+  <li><strong>Photon by komoot</strong> (nearby fuel and charging stations) — used only when you open
+    Fuel &amp; Charging.
+    <a href="https://www.komoot.com/privacy">https://www.komoot.com/privacy</a></li>
   <li><strong>OpenStreetMap tile servers</strong> (map images for trip history) — requested only
     for a trip you are actually looking at, and cached on your device so the same map isn't
     fetched again. Map data © OpenStreetMap contributors.
     <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></li>
 </ul>
 
-<p><strong>Opening a place in another app.</strong> Some buttons — "Open route in Maps", "Open area
-in OpenStreetMap", the directions button on a nearby fuel or charging station, and the map button
-beside an entry in a trip's "What happened" list — hand a latitude/longitude to whichever map app you
-have installed, usually Google Maps. That only happens when you tap one of those buttons, nothing is
-sent in the background, and what you do in that other app is covered by that app's own privacy
-policy rather than this one.</p>
+<p><strong>Opening a place or route in another app.</strong> Some buttons hand locations to
+another app or website, and only when you tap them:</p>
+<ul>
+  <li>"Open route in Maps" gives Google Maps a trip's start, end and up to nine points along its route.</li>
+  <li>"Show route on OpenStreetMap" opens <strong>GraphHopper Maps</strong> (an OpenStreetMap route
+    planner) in your browser with a trip's start, end and up to nine points along its route —
+    <a href="https://www.graphhopper.com/privacy/">https://www.graphhopper.com/privacy/</a></li>
+  <li>The directions button on a nearby fuel or charging station, and the map button beside an entry
+    in a trip's "What happened" list, give one latitude/longitude to your map app, usually Google Maps.</li>
+</ul>
+<p>Nothing is sent in the background, and what you do in that other app or site is covered by its own
+privacy policy rather than this one.</p>
+
+<h2>Sharing a trip</h2>
+
+<p>A saved trip can be shared as an image, as a GPX file, or as a <strong>.spd trip file</strong>.
+Each is created on your device only when you tap share, and goes only to the app you then choose in
+Android's share menu (a chat, email, cloud drive and so on) — never to us. The GPX and .spd files
+contain the trip's route and details, so share them only with people you mean to see where you
+drove.</p>
+<p>A <strong>.spd</strong> file holds the complete trip and is encrypted so that it opens only in this
+app; any change to the file makes it refuse to open. When you open a .spd file someone sent you, the
+trip is shown on your device only: it is not added to your own trip history and nothing is sent
+anywhere.</p>
 
 <p>Place names for trip history are produced by Android's built-in geocoding service. The app
 passes only the coordinates to that operating-system API and never to any service of our own;
@@ -109,23 +150,27 @@ Permissions; the speedometer simply won't be able to show a live reading without
 
 <h2>Advertising</h2>
 
-<p>The free tier shows ads served by <strong>Unity Ads</strong>, a third-party advertising
-network operated by Unity Technologies. Unity may collect device identifiers (such as the Android
-Advertising ID) and use them for ad personalisation, subject to your consent choices. Where required
-by law (EEA, UK, California), the app shows a consent form (via Google's User Messaging Platform)
-before any personalised ads are requested, your choice is passed to Unity before any ad is
-requested, and you can change that choice at any time via the same form.</p>
+<p>The free tier shows ads through <strong>Unity LevelPlay</strong>, an ad mediation service
+operated by Unity Technologies, which fills them from <strong>Unity Ads</strong> and <strong>Meta
+Audience Network</strong>. These may collect device identifiers (such as the Android Advertising ID)
+and use them for ad personalisation, subject to your consent choices. Where required by law (EEA, UK,
+California), the app shows a consent form (via Google's User Messaging Platform) before any
+personalised ads are requested, your choice is passed to the ad networks before any ad is requested,
+and you can change that choice at any time via the same form.</p>
 
-<p>See Unity's own policies for what it collects:</p>
+<p>See their own policies for what they collect:</p>
 <ul>
-  <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">https://unity.com/legal/game-player-and-app-user-privacy-policy</a></li>
+  <li>Unity (LevelPlay and Unity Ads) —
+    <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">https://unity.com/legal/game-player-and-app-user-privacy-policy</a></li>
   <li><a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></li>
+  <li>Meta (Audience Network) —
+    <a href="https://www.facebook.com/privacy/policy/">https://www.facebook.com/privacy/policy/</a></li>
 </ul>
 
-<p>Some optional extras — certain speedometer dials, HUD styles and backdrops, and the
-faster acceleration finish lines — can also be unlocked for a limited time by choosing to
-watch a rewarded ad. Those are served by the same Unity network described above, and are only
-ever shown when you tap to ask for one.</p>
+<p>Some optional extras — certain speedometer dials, HUD styles and backdrops, the faster
+acceleration finish lines, and the longer sprint distances and other braking speeds — can also be
+unlocked for a limited time by choosing to watch a rewarded ad. Those come through the same networks
+described above, and are only ever shown when you tap to ask for one.</p>
 
 <p>Earlier versions of this app used Google AdMob. It no longer does, and no data is sent to
 AdMob.</p>
@@ -168,7 +213,7 @@ confirmation token, used solely to unlock premium features on your device/accoun
 <p>The app does not require an account and does not collect your name, email, contacts,
 photos, or files. We ourselves operate no servers and receive no data about you.</p>
 
-<p>Note that if you consent to personalised ads, Unity Ads may use your advertising ID for
+<p>Note that if you consent to personalised ads, the ad networks above may use your advertising ID for
 cross-app ad personalisation, as described under "Advertising" above — you can withdraw that consent
 at any time via the consent form, or reset/delete your advertising ID in Android Settings.</p>
 
