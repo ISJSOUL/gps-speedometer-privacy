@@ -36,7 +36,7 @@
 <body>
 
 <h1>Speedometer: HUD, Odometer — Privacy Policy</h1>
-<p class="updated">Last updated: 27 September 2026</p>
+<p class="updated">Last updated: 1 October 2026</p>
 
 <p>This policy covers the Android app <strong>Speedometer: HUD, Odometer</strong> (package <code>com.speedopro.app</code>), previously published as <em>GPS Speedometer</em>. It is referred to below simply as “the app”.</p>
 
@@ -62,7 +62,8 @@ uninstall the app.</p>
 short list of things the app noticed along the way, each with the coordinates and the time it
 happened: speed cameras, toll plazas and level crossings you passed and how fast you were going as
 you passed them; <strong>each time your speed went over the posted limit, together with that
-limit</strong>; and any map correction you chose to send to OpenStreetMap. This is what the
+limit</strong>; <strong>where you stopped along the way and for how long</strong> (stops of two
+minutes or more); and any map correction you chose to send to OpenStreetMap. This is what the
 "What happened" list on a saved trip is showing you. Like the rest of trip history it lives
 <strong>only in the app's private storage on your device</strong>, is never uploaded to us or to
 anyone else, and goes away when you delete the trip, clear trip history, or uninstall the app.</p>
@@ -102,8 +103,10 @@ identifier — only a latitude/longitude, or the map tile numbers derived from i
   <li><strong>Open-Meteo</strong> (weather) —
     <a href="https://open-meteo.com/en/terms">https://open-meteo.com/en/terms</a></li>
   <li><strong>OpenStreetMap Overpass API</strong> (posted speed limits, road alerts, and nearby
-    stations when Photon has none) — sent to one of the public Overpass servers, tried in turn:
-    overpass-api.de (FOSSGIS), maps.mail.ru (VK) and overpass.private.coffee. Map data ©
+    stations when Photon has none) — sent to the public Overpass servers overpass-api.de (FOSSGIS),
+    maps.mail.ru (VK) and overpass.private.coffee, one after another or, when one is slow to answer,
+    more than one at once. For speed cameras, tolls and level crossings the app asks for an area
+    several kilometres across around and ahead of you, rather than your exact position. Map data ©
     OpenStreetMap contributors.
     <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></li>
   <li><strong>Photon by komoot</strong> (nearby fuel and charging stations) — used only when you open
@@ -114,6 +117,12 @@ identifier — only a latitude/longitude, or the map tile numbers derived from i
     fetched again. Map data © OpenStreetMap contributors.
     <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></li>
 </ul>
+
+<p><strong>Road data (stored on your device).</strong> So that speed limits and road alerts appear
+straight away, the app keeps the camera, toll and level crossing areas it has downloaded, and the speed
+limits it has looked up together with the spot each was looked up for, for up to 30 days. This is kept
+<strong>only in the app's private storage on your device</strong>, is never uploaded, and is removed
+when you clear the app's cache or storage, or uninstall it.</p>
 
 <p><strong>Opening a place or route in another app.</strong> Some buttons hand locations to
 another app or website, and only when you tap them:</p>
@@ -188,16 +197,19 @@ screen that shows you the exact wording first.</p>
 <ul>
   <li>the coordinates the report is about</li>
   <li>the speed limit you entered, or the kind of station</li>
+  <li>for a missing station, its name if you chose to type one (at most 20 characters)</li>
   <li>the road or area name produced by your device's geocoder</li>
   <li>your direction of travel, and the GPS accuracy of the fix</li>
-  <li>the app's name, version and build number</li>
+  <li>the app's name, version and build number, and its package name (com.speedopro.app), so a
+    mapper can tell which app sent the note</li>
 </ul>
 
 <p>Reports are sent <strong>anonymously</strong>. They are not tied to any account, device
-identifier or advertising ID, and the app sends no name, email or contact detail with them. There is
-no free-text box: every note is assembled from the choices above, so a report cannot carry personal
-information. Because map notes are public and permanent, please do not use this feature for anything
-you would not want published.</p>
+identifier or advertising ID, and the app sends no name, email or contact detail with them. The
+only text you can type is the optional station name — one line, at most 20 characters, shown in the
+preview before you send — and everything else is assembled from the choices above. Please don't type
+anything personal into it: because map notes are public and permanent, do not use this feature for
+anything you would not want published.</p>
 
 <p>OpenStreetMap Foundation privacy policy —
 <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></p>
